@@ -1,0 +1,56 @@
+/*CSS DOCUMENT*/
+@CHARSET "UTF-8";
+
+/*configuración de fuentes*/
+@font-face {
+    font-family: 'ptserif regular';
+    src: url(fuentes/ptserif-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ptserif bold';
+    src: url(fuentes/ptserif-bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ptserif italic';
+    src: url(fuentes/ptserif-italic.ttf) format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ptserif bold italic';
+    src: url(fuentes/ptserif-bold-italic.ttf) format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+/*aca se empiezan a configurar los estilos de la pagina*/
+h1 {
+    font-family: 'ptserif bold', serif;
+    color: #0fbee6;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'ptserif bold italic', serif;
+    color: #08697f;
+    text-align: justify;
+}
+
+h3 {
+    font-family: 'ptserif italic', serif;
+    font-size: 17px;
+    color: #01171c;
+    text-align: justify;
+}
+
+p {
+    font-family: 'ptserif regular', serif;
+    color: #000000;
+    text-align: justify;
+}
