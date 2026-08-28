@@ -1,56 +1,66 @@
 /*CSS DOCUMENT*/
 @CHARSET "UTF-8";
 
-/*configuración de fuentes*/
-@font-face {
-    font-family: 'ptserif regular';
-    src: url(fuentes/ptserif-regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ptserif bold';
-    src: url(fuentes/ptserif-bold.ttf) format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ptserif italic';
-    src: url(fuentes/ptserif-italic.ttf) format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'ptserif bold italic';
-    src: url(fuentes/ptserif-bold-italic.ttf) format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-/*aca se empiezan a configurar los estilos de la pagina*/
 h1 {
-    font-family: 'ptserif bold', serif;
-    color: #0fbee6;
+    font-family: "pt-serif-bold", serif;
+    color: #f4f6f6;
     text-align: center;
 }
 
 h2 {
-    font-family: 'ptserif bold italic', serif;
-    color: #08697f;
+    font-family: "pt-serif-bold-italic", serif;
+    color: #10969b;
     text-align: justify;
 }
 
 h3 {
-    font-family: 'ptserif italic', serif;
+    font-family: "pt-serif-regular-italic", serif;
     font-size: 17px;
-    color: #01171c;
+    color: #033a47;
     text-align: justify;
 }
 
 p {
-    font-family: 'ptserif regular', serif;
+    font-family: "pt-serif-regular", serif;
     color: #000000;
     text-align: justify;
+}
+
+body {
+    background-color: #fbeade;
+
+    p {
+        text-wrap: square;
+    }
+h2,h3{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    p,ul {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+#yo {
+    background-image: url("encabezado.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+}
+
+#yo h1,
+#yo p {
+    text-align: center;
+}
+#pie-de-pagina {
+    background: radial-gradient(circle, #f28b95, #f2294b);
+    padding: 10px;
+    text-align: center;
+}
+#pie-de-pagina p {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
 }
