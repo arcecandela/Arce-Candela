@@ -2,7 +2,7 @@
 @CHARSET "UTF-8";
 
 h1 {
-    font-family: "pt-serif-bold", serif;
+    font-family: "pt-serif-bold", serif; /* las fuentes no funcionan porque así no se escribe, fijate en la documentación de google fonts que las indicaciones son distintas*/
     color: #f4f6f6;
     text-align: center;
 }
