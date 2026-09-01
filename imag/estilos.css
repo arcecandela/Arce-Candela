@@ -1,20 +1,27 @@
 /*CSS DOCUMENT*/
 @CHARSET "UTF-8";
 
+/*Se definen los estilos de los parrafos*/
 h1 {
     font-family: "pt-serif-bold", serif;
+    font-weight: 700;
+    font-style: normal;
     color: #f4f6f6;
     text-align: center;
 }
 
 h2 {
     font-family: "pt-serif-bold-italic", serif;
+    font-weight: 700;
+    font-style: italic;
     color: #10969b;
     text-align: justify;
 }
 
 h3 {
     font-family: "pt-serif-regular-italic", serif;
+    font-weight: 400;
+    font-style: italic;
     font-size: 17px;
     color: #033a47;
     text-align: justify;
@@ -22,21 +29,55 @@ h3 {
 
 p {
     font-family: "pt-serif-regular", serif;
+    font-weight: 400;
+    font-style: normal;
     color: #000000;
     text-align: justify;
 }
 
+/*Se empieza a dar formato a la pagina*/
+header {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgb(252, 136, 112);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    max-width: 1200px;
+}
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
 body {
     background-color: #fbeade;
 
     p {
         text-wrap: square;
+        max-width: 800px;
     }
-h2,h3{
+
+    h2,
+    h3 {
         margin-left: 25px;
         margin-right: 25px;
     }
-    p,ul {
+
+    p,
+    ul {
         margin-left: 40px;
         margin-right: 40px;
     }
@@ -48,19 +89,18 @@ h2,h3{
     background-repeat: no-repeat;
     background-size: cover;
     padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }
 
-#yo h1,
-#yo p {
-    text-align: center;
-}
 #pie-de-pagina {
     background: radial-gradient(circle, #f28b95, #f2294b);
-    padding: 10px;
+    padding: 30px;
     text-align: center;
-}
-#pie-de-pagina p {
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }
