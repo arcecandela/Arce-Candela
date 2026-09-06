@@ -1,9 +1,10 @@
 /*CSS DOCUMENT*/
 @CHARSET "UTF-8";
+/*charset y demás va en minúscula*/
 
 /*Se definen los estilos de los parrafos*/
 h1 {
-    font-family: "pt-serif-bold", serif;
+    font-family: "pt-serif-bold", serif; /*no te funcionan las tipografías porque no están bien escritas las font family, revisá la documentación de google fonts que ahí dice cómo*/
     font-weight: 700;
     font-style: normal;
     color: #aa2a81;
@@ -68,7 +69,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100vw;
+    width: 100vw; /*los porcentajes funcionan mucho mejor con los anchos que los vw, a veces traen resultados indeseados*/
     max-width: 1200px;
     
 }
@@ -100,7 +101,7 @@ body {
     background-color: #fbeade;
 
     p {
-        text-wrap: square;
+        text-wrap: square; /*esta propiedad no existe*/
         max-width: 800px;
     }
 
