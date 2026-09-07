@@ -1,10 +1,9 @@
 /*CSS DOCUMENT*/
-@CHARSET "UTF-8";
-/*charset y demás va en minúscula*/
+@charset "UTF-8";
 
 /*Se definen los estilos de los parrafos*/
 h1 {
-    font-family: "pt-serif-bold", serif; /*no te funcionan las tipografías porque no están bien escritas las font family, revisá la documentación de google fonts que ahí dice cómo*/
+    font-family: "PT Serif", serif;
     font-weight: 700;
     font-style: normal;
     color: #aa2a81;
@@ -12,7 +11,7 @@ h1 {
 }
 
 h2 {
-    font-family: "pt-serif-bold-italic", serif;
+    font-family: "PT Serif", serif;
     font-weight: 700;
     font-style: italic;
     color: #10969b;
@@ -20,7 +19,7 @@ h2 {
 }
 
 h3 {
-    font-family: "pt-serif-regular-italic", serif;
+    font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: italic;
     font-size: 17px;
@@ -29,93 +28,62 @@ h3 {
 }
 
 p {
-    font-family: "pt-serif-regular", serif;
+    font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: normal;
     color: #000000;
     text-align: justify;
 }
+li {
 
-/*Se empieza a dar formato a la pagina*/
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #000000;
+}
+
+/*Se empieza a dar formato al header*/
 header {
     display: flex;
     justify-content: center;
     padding: 30px;
     background-color: rgb(252, 136, 112);
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fila {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.fila section {
-    flex: 1;
-}
-
 nav {
     display: flex;
     gap: 30px;
 }
-
-.contenedor {
+.menu {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100vw; /*los porcentajes funcionan mucho mejor con los anchos que los vw, a veces traen resultados indeseados*/
-    max-width: 1200px;
-    
-}
-#iconos {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 40px;
+    gap: 30px;
 }
 
-#iconos div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
+.menu a {
+    color: #aa2a81;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-#iconos img {
-    margin-bottom: 10px;
+.menu a:hover {
+    color: #ffffff;
 }
 
-#iconos p {
+/*Se empieza a dar formato al main*/
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
     margin: 0;
-    text-align: center;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
-    background-color: #fbeade;
-
-    p {
-        text-wrap: square; /*esta propiedad no existe*/
-        max-width: 800px;
-    }
-
-    h2
-    h3 {
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-
-    p,
-    ul {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
+    margin: 0;
+    background-color: #f9ebeb;
 
     li {
         list-style: none;
@@ -127,28 +95,230 @@ body {
     }
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*sección yo*/
 #yo {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    width: 80%;
+    gap: 40px;
+    width: 100%;
     max-width: 900px;
+    margin: 0 auto;
     padding: 30px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+#yo img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#yo article {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+/*sección fila*/
+#formacion p {
+    margin-left: 30px;
+}
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px 20px 60px;
     box-sizing: border-box;
 }
 
-#pie-de-pagina {
-    background: radial-gradient(circle, #f28b95, #f2294b);
+.fila section {
+    width: 100%;
+    max-width: 500px;
+    flex: 1 1 350px;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+/*sección diseño gráfico*/
+#diseño-gráfico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 30px;
+}
+
+#iconos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#iconos>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: none;
+    width: 250px;
+    max-width: 250px;
+}
+
+#iconos>div>img {
+    margin-bottom: 10px;
+}
+
+/* NOMBRE DE LOS PROGRAMAS */
+#iconos>div>p {
+    margin: 0;
+    text-align: center;
+}
+
+/* TARJETAS */
+.tarjeta {
+    width: 100%;
+    max-width: 250px;
+    height: 390px;
+    perspective: 1000px;
+    display: block;
+    margin-top: 20px;
+}
+
+.tarjeta-contenido {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.tarjeta:hover .tarjeta-contenido {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+/* FRENTE Y DORSO */
+.tarjeta-frente,
+.tarjeta-dorso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(251, 197, 197);
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.tarjeta-dorso {
+    transform: rotateY(180deg);
+}
+
+/* IMÁGENES */
+.tarjeta-frente img,
+.tarjeta-dorso img {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* EPÍGRAFES */
+.tarjeta-frente p,
+.tarjeta-dorso p {
+    position: absolute;
+    bottom: 18px;
+    left: 5%;
+    width: 90%;
+    height: 54px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+/*sección idiomas*/
+#idiomas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px;
+    padding: 30px;
+}
+
+/*sección pie de página*/
+#pie-de-pagina {
+    background: radial-gradient(circle, #f28b95, #aa2a81);
+    padding: 20px;
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
+
+#pie-de-pagina h3 {
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+#profesores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#profesores img {
+    width: 80px;
+    height: 80px;
+}
+
+#profesores div {
+    text-align: left;
+}
+
+#profesores p {
+    margin: 5px 0;
+}
+
+.materia {
+    color: #eaefef;
+}
+
 a {
     color: inherit;
     text-decoration: none;
+
+}
+
+section a:hover,
+footer a:hover {
+    font-size: 18px;
 }

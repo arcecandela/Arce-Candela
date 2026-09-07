@@ -8,7 +8,7 @@
     <style>
         @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
     </style>
-    <!--falta el favicon!!-->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <div class="contenedor">
             <img src="img/logo-cande.png" alt="Logo de Arce Candela" width="90" height="90">
             <h1> Candela Arce</h1>
-            <nav>
+            <nav class="menu">
                 <a href="#yo">Sobre mí</a>
                 <a href="#formacion">Formación</a>
                 <a href="#experiencia">Experiencia</a>
@@ -26,7 +26,7 @@
     </header>
     <main>
         <section id="yo">
-            <img src="img/foto-cande.png" alt="Foto de Arce Candela" width="250" height="311">
+            <img src="img/foto-cande.png" alt="Foto de Arce Candela" width="250px" height="311px">
             <article>
                 <p>Estudiante universitaria de Diseño y Comunicación Visual, actualmente cursando el tercer año de la
                     carrera. Me caracterizo por ser una persona responsable, organizada y comprometida, con buena
@@ -36,11 +36,9 @@
             </article>
         </section>
         <div class="fila">
-            <section>
+            <section id="formacion">
                 <h2>Formación Académica</h2>
-
                 <article>
-
                     <h3>
                         <a href="https://www.unla.edu.ar/" target="_blank">
                             Universidad Nacional de Lanús
@@ -59,7 +57,7 @@
                     <p>Año de egreso: 2022</p>
                 </article>
             </section>
-            <section> <!--aprovechando que arriba en el nav pusiste el # para que redirija al id correspondiente podrías crear la class de estas secciones para que funcione-->
+            <section id="experiencia">
                 <h2>Experiencia Laboral</h2>
                 <h3>Cyber OK | Abril-2023</h3>
                 <ul>
@@ -78,45 +76,90 @@
                         <li>Manejo básico de caja</li>
                     </ul>
                 </article>
+            </section>
         </div>
-        </section> <!--ojo con esta section que está cerrando por fuera del div, o el div está abriendo por fuera de la section-->
-        <section>
-<!--acá se te chingó el indentado-->
-            <article> <!--es necesario este article?-->
-                <h2>Diseño gráfico</h2>
-                <div id="iconos">
-    <div>
-        <img src="img/AI.png" alt="Logo de Adobe Illustrator" width="60" height="60">
-        <p>Adobe Illustrator | Nivel: avanzado</p> <!--así no se escriben los archivos!!-->
-    </div>
 
-    <div>
-        <img src="img/PS.png" alt="Logo de Adobe Photoshop" width="60" height="60">
-        <p>Adobe Photoshop | Nivel: Intermedio</p>  <!--así no se escriben los archivos!!-->
-    </div>
+        <section id="diseño-gráfico">
+            <h2>Diseño gráfico</h2>
+            <div id="iconos">
+                <div>
+                    <img src="img/adobe-illustrator.png" alt="Logo de Adobe Illustrator" width="60px" height="60px">
+                    <p>Adobe Illustrator</p>
 
-    <div>
-        <img src="img/ID.png" alt="Logo de Adobe InDesign" width="60" height="60">
-        <p>Adobe InDesign | Nivel: intermedio</p>  <!--así no se escriben los archivos!!-->
-    </div>
-</div>
-            
-            </article>
+                    <div class="tarjeta">
+                        <div class="tarjeta-contenido">
+
+                            <div class="tarjeta-frente"> <img src="img/trabajo-nodos.png"
+                                    alt="Trabajo de pluma realizado en Illustrator">
+                                <p>Ejercicio de herramienta Pluma realizado en Adobe Illustrator.</p>
+                            </div>
+                            <div class="tarjeta-dorso"> <img src="img/afiche-tipo2.png" alt="Afiche de Tipografía 2">
+                                <p>Afiche desarrollado para la materia Tipografía 2.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/adobe-photoshop.png" alt="Logo de Adobe Photoshop" width="60px" height="60px">
+                    <p>Adobe Photoshop</p>
+                    <div class="tarjeta">
+                        <div class="tarjeta-contenido">
+
+                            <div class="tarjeta-frente"> <img src="img/juego de mesa-afuera.jpeg"
+                                    alt="Diseño exterior del juego de mesa Reliquias Robadas y su tablero">
+                                <p>Diseño exterior del juego de mesa “Reliquias Robadas” y su tablero.</p>
+                            </div>
+                            <div class="tarjeta-dorso"> <img src="img/juego de mesa-adentro.jpeg"
+                                    alt="Diseño interior y componentes del juego Reliquias Robadas">
+                                <p>Diseño interior y componentes del juego “Reliquias Robadas”.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="img/adobe-indesign.png" alt="Logo de Adobe InDesign" width="60px" height="60px">
+                    <p>Adobe InDesign</p>
+                    <div class="tarjeta">
+                        <div class="tarjeta-contenido">
+
+                            <div class="tarjeta-frente"> <img src="img/portada-menu.png"
+                                    alt="Portada y contraportada del menú de Midnight Raven">
+                                <p>Diseño de portada y contraportada para el menú de Midnight Raven.</p>
+                            </div>
+                            <div class="tarjeta-dorso"> <img src="img/contenido-menu.png"
+                                    alt="Página interior del menú de Midnight Raven">
+                                <p>Diseño de página interior para el menú de Midnight Raven.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section>
+
+        <section id="idiomas">
             <h2>Idiomas</h2>
             <p>Español: Nativo.</p>
         </section>
     </main>
     <footer id="pie-de-pagina">
-        <p>
-            <a href="https://catedrawis.notion.site/C-tedra-Wisch-evsky-1b65b942afd84eefb42ff990f273653b"
+        <h3>
+            <a class="materia"
+                href="https://catedrawis.notion.site/C-tedra-Wisch-evsky-1b65b942afd84eefb42ff990f273653b"
                 target="_blank">
                 Computación III 2do. cuatrimestre 2026
             </a>
-        </p>
-        <p>Marcelo Wischñevsky Aimé Albornoz Chiara Cosentino</p><!--capaz que siendo tres profes distintos necesiten alguna distinción, visual o semántica-->
-        <img src="img/Universidad_Nacional_de_Lanús_logo.png" alt="Logo de la UNLa" width="60" height="60"> <!--así no se escriben los archivos!!!-->
+        </h3>
+        <section id="profesores">
+            <img src="img/universidad-nacional-de-lanus-logo.png" alt="Logo de la UNLa" width="80" height="80">
+            <div>
+                <p>Prof. Marcelo Wischñevsky</p>
+                <p>Aimé Albornoz </p>
+                <p>Chiara Cosentino</p>
+            </div>
+        </section>
     </footer>
 </body>
 
