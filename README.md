@@ -1,4 +1,12 @@
-##Entrega TP1
-Hola, buenas tardes. Para la realización del currículum vitae en formato web para la materia Computación 3, uno de mis principales pensamientos era que fuera en tonos rosas, ya que es mi color favorito. Partiendo de eso, la mayor parte de la estructura se fue dando a partir de los videos de Aime, porque esta es la primera vez que hago una página yo sola y no quería equivocarme. En el lugar que más me di libertad de buscar cómo se hacía, fué en la parte de diseño gráfico, porque sentía que debía ser mi boom, y espero haberlo conseguido. 
-#Mi pantalla es 1920x1080
-#El editor de codigo que use fue Visual Studio Code
+## Entrega TP1
+* Hola, buenas tardes. Para la realización del currículum vitae en formato web para la materia Computación 3 se utilizo el siguiente formato:
+  -**Header**: Se utilizo para la navegación de la pagina
+  -**Main**: Se utilizo para separar el contenido de las secciones: "Yo" - "Formacion" - "Experiencia" - Diseño grafico - "Idiomas"
+  -**Footer**: Se utilizo para poner el logo de la facultad y poner a los profesores
+* Mi pantalla es 1920x1080px
+* El editor de codigo que use fue Visual Studio Code
+## Cosas que no llegue a hacer 
+* Utilizar mejor el espacio
+* Experimentar con tipografías y el tamaño de la misma
+* Poner un fondo interactivo
+  
