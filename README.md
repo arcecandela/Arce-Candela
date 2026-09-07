@@ -9,4 +9,6 @@
 * Utilizar mejor el espacio
 * Experimentar con tipografías y el tamaño de la misma
 * Poner un fondo interactivo
+* Animar mi logo
+* Colocar algo que se mueva 
   
