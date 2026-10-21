@@ -44,12 +44,25 @@ li {
 }
 
 /*Se empieza a dar formato al header*/
+
 header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: center;
-    padding: 30px;
-    background-color: rgb(252, 136, 112);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 24px;
+
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
+
 nav {
     display: flex;
     gap: 30px;
@@ -99,6 +112,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 115px;
 }
 /*sección yo*/
 #yo {
@@ -321,4 +335,7 @@ a {
 section a:hover,
 footer a:hover {
     font-size: 18px;
+}
+body {
+    cursor: url("./img/cursor_nuevo.png"), auto;
 }
