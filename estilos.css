@@ -1,24 +1,30 @@
 /*CSS DOCUMENT*/
 @charset "UTF-8";
 
+/* =========================================
+1. ESTILOS GENERALES
+   ========================================= */
+
 /*Se definen los estilos de los parrafos*/
-h1 {
+h2 {
     font-family: "PT Serif", serif;
+    font-size: 32px;
     font-weight: 700;
     font-style: normal;
     color: #aa2a81;
     text-align: center;
 }
 
-h2 {
+h3 {
     font-family: "PT Serif", serif;
+    font-size: 24px;
     font-weight: 700;
     font-style: italic;
-    color: #10969b;
+    color: #FA9488;
     text-align: justify;
 }
 
-h3 {
+h4 {
     font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: italic;
@@ -29,11 +35,13 @@ h3 {
 
 p {
     font-family: "PT Serif", serif;
+    font-size: 16px;
     font-weight: 400;
     font-style: normal;
-    color: #000000;
+    color: #3D2132;
     text-align: justify;
 }
+
 li {
 
     font-family: "PT Serif", serif;
@@ -43,30 +51,84 @@ li {
     color: #000000;
 }
 
+@font-face {
+    font-family: "LastChristmas";
+    src: url("fuentes/LastChristmas.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.portfolio main h1 {
+    color: #AA2881;
+    font-family: "LastChristmas", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 402px;
+    height: 176px;
+}
+
+body.portfolio main h1 {
+    font-family: "LastChristmas", sans-serif;
+}
+
 /*Se empieza a dar formato al header*/
+
+/* Encabezado */
+
 
 header {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1000;
 
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    box-sizing: border-box;
-    padding: 12px 24px;
+    padding: 12px 20px;
 
-    background: rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    /* Efecto glass */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.04);
+}
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+/* Organización del logo y el menú */
+header .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tamaño del logo */
+header .logo img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Enlaces del menú */
+header .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 nav {
     display: flex;
     gap: 30px;
 }
+
 .menu {
     display: flex;
     gap: 30px;
@@ -112,8 +174,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 115px;
+    padding-top: 120px;
 }
+
 /*sección yo*/
 #yo {
     display: flex;
@@ -138,10 +201,12 @@ main {
     flex: 1 1 400px;
     max-width: 500px;
 }
+
 /*sección fila*/
 #formacion p {
     margin-left: 30px;
 }
+
 .fila {
     display: flex;
     flex-wrap: wrap;
@@ -168,6 +233,7 @@ main {
     width: 100%;
     max-width: 1200px;
 }
+
 /*sección diseño gráfico*/
 #diseño-gráfico {
     display: flex;
@@ -336,6 +402,149 @@ section a:hover,
 footer a:hover {
     font-size: 18px;
 }
+
 body {
     cursor: url("./img/cursor_nuevo.png"), auto;
+}
+
+/* Tamaño del logo del encabezado */
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Organización del encabezado */
+header .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Fondo exclusivo del index */
+body.portfolio {
+    background-image: url("img/fondo_degradado.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* Presentación del index */
+body.portfolio .presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+/* GIF del logo */
+body.portfolio .gif-presentacion {
+    width: 477px;
+    height: 477px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+
+/* Flecha hacia abajo index */
+body.portfolio .contenedor-flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    margin-bottom: 40px;
+}
+
+body.portfolio .enlace-flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.portfolio .flecha-abajo {
+    display: flex;
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+body.portfolio .enlace-flecha:hover .flecha-abajo {
+    transform: scale(1.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* FLECHA HACIA ABAJO */
+body.portfolio .contenedor-flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    margin-bottom: 40px;
+}
+
+body.portfolio .enlace-flecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.portfolio .flecha-abajo {
+    display: flex;
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+body.portfolio .enlace-flecha:hover .flecha-abajo {
+    transform: scale(1.2);
+}
+
+/* DESPLAZAMIENTO SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* SEGUNDA SECCIÓN: SOBRE MÍ */
+body.portfolio .sobre-mi {
+    display: flex;
+    width: 100%;
+    max-width: 1110px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+/* TÍTULO DE LA SEGUNDA SECCIÓN */
+body.portfolio .sobre-mi h1 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    margin: 0;
+    text-align: right;
+}
+
+/* TEXTO DE LA SEGUNDA SECCIÓN */
+body.portfolio .sobre-mi p {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.6;
 }
