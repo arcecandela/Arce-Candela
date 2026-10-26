@@ -1,11 +1,6 @@
 /*CSS DOCUMENT*/
 @charset "UTF-8";
 
-/* =========================================
-1. ESTILOS GENERALES
-   ========================================= */
-
-/*Se definen los estilos de los parrafos*/
 h2 {
     font-family: "PT Serif", serif;
     font-size: 32px;
@@ -58,7 +53,7 @@ li {
     font-style: normal;
 }
 
-body.portfolio main h1 {
+h1 {
     color: #AA2881;
     font-family: "LastChristmas", sans-serif;
     font-size: 64px;
@@ -69,15 +64,10 @@ body.portfolio main h1 {
     height: 176px;
 }
 
-body.portfolio main h1 {
-    font-family: "LastChristmas", sans-serif;
-}
-
+/* =========================================
+1. ESTILOS GENERALES
+   ========================================= */
 /*Se empieza a dar formato al header*/
-
-/* Encabezado */
-
-
 header {
     position: fixed;
     top: 0;
@@ -91,12 +81,11 @@ header {
     padding: 12px 20px;
 
     /* Efecto glass */
-    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.04);
+    background: #FFFFFF0A;
+    border: 1px solid #FFFFFF99;
 }
-
 
 /* Organización del logo y el menú */
 header .contenedor {
@@ -112,8 +101,6 @@ header .contenedor {
 /* Tamaño del logo */
 header .logo img {
     display: block;
-    width: 60px;
-    height: 60px;
     object-fit: contain;
 }
 
@@ -144,6 +131,84 @@ nav {
     color: #ffffff;
 }
 
+/* Tamaño del logo del encabezado */
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Organización del encabezado */
+header .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* FOOTER */
+#pie-de-pagina {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 182px;
+    padding: 30px 40px;
+    background-color: #aa2a81;
+    box-sizing: border-box;
+}
+
+.titulo-footer h1 {
+    color: #FA9488;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* LOGO */
+.logo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TÍTULO Y DERECHOS */
+.titulo-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* CONTACTO */
+.contacto-footer {
+    display: flex;
+    width: 218px;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+}
+
+.contacto-footer h2,
+.contacto-footer p {
+    display: flex;
+    margin: 0;
+}
+
+/* REDES SOCIALES */
+.redes-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* =========================================
+ESTILOS DEL CV
+   ========================================= */
 /*Se empieza a dar formato al main*/
 * {
     box-sizing: border-box;
@@ -226,202 +291,10 @@ main {
     flex: 1 1 350px;
 }
 
-.contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 1200px;
-}
 
-/*sección diseño gráfico*/
-#diseño-gráfico {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-}
-
-#iconos {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 60px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#iconos>div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: none;
-    width: 250px;
-    max-width: 250px;
-}
-
-#iconos>div>img {
-    margin-bottom: 10px;
-}
-
-/* NOMBRE DE LOS PROGRAMAS */
-#iconos>div>p {
-    margin: 0;
-    text-align: center;
-}
-
-/* TARJETAS */
-.tarjeta {
-    width: 100%;
-    max-width: 250px;
-    height: 390px;
-    perspective: 1000px;
-    display: block;
-    margin-top: 20px;
-}
-
-.tarjeta-contenido {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.tarjeta:hover .tarjeta-contenido {
-    transform: rotateY(180deg) scale(1.1);
-}
-
-/* FRENTE Y DORSO */
-.tarjeta-frente,
-.tarjeta-dorso {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgb(251, 197, 197);
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
-    padding: 18px;
-    box-sizing: border-box;
-}
-
-.tarjeta-dorso {
-    transform: rotateY(180deg);
-}
-
-/* IMÁGENES */
-.tarjeta-frente img,
-.tarjeta-dorso img {
-    width: 100%;
-    max-width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-}
-
-/* EPÍGRAFES */
-.tarjeta-frente p,
-.tarjeta-dorso p {
-    position: absolute;
-    bottom: 18px;
-    left: 5%;
-    width: 90%;
-    height: 54px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.3;
-}
-
-/*sección idiomas*/
-#idiomas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0px;
-    padding: 30px;
-}
-
-/*sección pie de página*/
-#pie-de-pagina {
-    background: radial-gradient(circle, #f28b95, #aa2a81);
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#pie-de-pagina h3 {
-    margin: 0 0 20px 0;
-    text-align: center;
-}
-
-#profesores {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-#profesores img {
-    width: 80px;
-    height: 80px;
-}
-
-#profesores div {
-    text-align: left;
-}
-
-#profesores p {
-    margin: 5px 0;
-}
-
-.materia {
-    color: #eaefef;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-
-}
-
-section a:hover,
-footer a:hover {
-    font-size: 18px;
-}
-
-body {
-    cursor: url("./img/cursor_nuevo.png"), auto;
-}
-
-/* Tamaño del logo del encabezado */
-.logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    display: block;
-}
-
-/* Organización del encabezado */
-header .contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
+/* =========================================
+ESTILOS DEL INDEX
+   ========================================= */
 
 /* Fondo exclusivo del index */
 body.portfolio {
@@ -432,56 +305,13 @@ body.portfolio {
     background-attachment: scroll;
 }
 
-/* Presentación del index */
+/* Como se organiza la presentación */
 body.portfolio .presentacion {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
 }
-
-
-/* GIF del logo */
-body.portfolio .gif-presentacion {
-    width: 477px;
-    height: 477px;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-}
-
-
-/* Flecha hacia abajo index */
-body.portfolio .contenedor-flecha {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 160px;
-    margin-bottom: 40px;
-}
-
-body.portfolio .enlace-flecha {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-body.portfolio .flecha-abajo {
-    display: flex;
-    width: 92px;
-    height: 92px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-body.portfolio .enlace-flecha:hover .flecha-abajo {
-    transform: scale(1.2);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
 
 /* FLECHA HACIA ABAJO */
 body.portfolio .contenedor-flecha {
@@ -490,12 +320,6 @@ body.portfolio .contenedor-flecha {
     align-items: center;
     margin-top: 160px;
     margin-bottom: 40px;
-}
-
-body.portfolio .enlace-flecha {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 body.portfolio .flecha-abajo {
@@ -520,7 +344,7 @@ body.portfolio .sobre-mi {
     display: flex;
     width: 100%;
     max-width: 1110px;
-    min-height: 100vh;
+    min-height: 85vh;
     box-sizing: border-box;
     flex-direction: row;
     justify-content: center;
@@ -547,4 +371,96 @@ body.portfolio .sobre-mi p {
     max-width: 600px;
     margin: 0;
     line-height: 1.6;
+}
+
+
+/* SECCIÓN DISEÑO GRÁFICO */
+#diseño-gráfico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px 30px;
+    margin-top: -100px;
+}
+
+/* contenedor de tarjetas */
+#contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+/* tarjeta */
+.tarjeta {
+    flex: none;
+    width: 250px;
+    height: 390px;
+    perspective: 1000px;
+    margin-top: 20px;
+}
+
+/* contenido y giro */
+.tarjeta-contenido {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.tarjeta:hover .tarjeta-contenido {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+/* frente y dorso */
+.tarjeta-frente,
+.tarjeta-dorso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    box-sizing: border-box;
+    background: #FFFFFF40;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #FFFFFF80;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 12px;
+}
+
+.tarjeta-dorso {
+    transform: rotateY(180deg);
+}
+
+/* imágenes de los trabajos */
+.tarjeta-frente img,
+.tarjeta-dorso img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* epígrafes */
+.tarjeta-frente p,
+.tarjeta-dorso p {
+    position: absolute;
+    bottom: 18px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 54px;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.3;
 }

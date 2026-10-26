@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.6 91.6">
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 93">
+  <!-- Generator: Adobe Illustrator 30.8.2, SVG Export Plug-In . SVG Version: 2.1.4 Build 7)  -->
   <defs>
     <style>
-      .cls-1 {
+      .st0 {
         fill: #97138b;
       }
 
-      .cls-2 {
+      .st1 {
         fill: #fa9488;
       }
     </style>
   </defs>
-  <g id="Capa_1" data-name="Capa 1">
-    <circle class="cls-2" cx="45.8" cy="45.8" r="45.8"/>
+  <g id="Capa_11" data-name="Capa_1">
+    <circle class="st1" cx="50" cy="46.5" r="45.8"/>
   </g>
-  <g id="Capa_2" data-name="Capa 2">
-    <path class="cls-1" d="M72.72,55.32s.02.02,0,.02c-17.66.29-26.92,16.18-26.92,30.7,0-14.54-9.07-30.44-26.92-30.7-.02,0-.02-.01,0-.01,6.4-.18,14.15-3.18,18.29-7.63,7.4-7.96,8.63-32.79,8.63-42.12,0,9.32,1.25,34.16,8.63,42.12,4.12,4.45,11.91,7.43,18.29,7.63Z"/>
+  <g id="Capa_2">
+    <path class="st0" d="M76.92,56.02s.02.02,0,.02c-17.66.29-26.92,16.18-26.92,30.7,0-14.54-9.07-30.44-26.92-30.7-.02,0-.02,0,0,0,6.4-.18,14.15-3.18,18.29-7.63,7.4-7.96,8.63-32.79,8.63-42.12,0,9.32,1.25,34.16,8.63,42.12,4.12,4.45,11.91,7.43,18.29,7.63h0Z"/>
   </g>
 </svg>
