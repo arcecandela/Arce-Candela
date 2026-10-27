@@ -89,24 +89,11 @@ header {
 header .contenedor {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Tamaño del logo */
-header .logo img {
-    display: block;
-    object-fit: contain;
-}
-
-/* Enlaces del menú */
-header .menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }
 
 nav {
@@ -114,8 +101,18 @@ nav {
     gap: 30px;
 }
 
+/* Tamaño del logo */
+.logo img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Enlaces del menú */
 .menu {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
@@ -127,14 +124,6 @@ nav {
 
 .menu a:hover {
     color: #ffffff;
-}
-
-/* Tamaño del logo del encabezado */
-.logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    display: block;
 }
 
 /* Organización del encabezado */
@@ -234,21 +223,25 @@ body {
 }
 
 body {
-    margin: 0;
     background-color: #f9ebeb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-    li {
-        list-style: none;
-    }
+/* Estilos de las listas */
+li {
+    list-style: none;
+}
 
-    li::before {
-        content: "★ ";
-        color: #aa2a81;
-    }
+li::before {
+    content: "★ ";
+    color: #aa2a81;
 }
 
 main {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     padding-top: 120px;
@@ -427,11 +420,12 @@ main {
 body.sobre-mi #hobbies h3 {
     text-align: center;
 }
+
 body.sobre-mi #hobbies {
     width: 100%;
     max-width: 1100px;
     padding: 0 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin-top: 150px;
     margin-bottom: 200px;
 }
@@ -461,7 +455,6 @@ body.sobre-mi #hobbies .cine {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
-    padding: 20px;
 }
 
 
@@ -664,4 +657,191 @@ body.portfolio .sobre-mi p {
     text-align: center;
     font-size: 14px;
     line-height: 1.3;
+}
+
+/* =========================================
+ESTILOS DEL CONTACTO
+   ========================================= */
+body.contacto {
+    background-image: url("img/fondo_contacto.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+#bienvenida {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 579px;
+}
+
+
+
+/* CONTENEDOR PRINCIPAL */
+main#contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 150px 60px;
+    box-sizing: border-box;
+}
+
+/* SECCIÓN DE BIENVENIDA */
+#bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    max-width: 500px;
+}
+
+/* SECCIÓN DEL FORMULARIO */
+#contacto #formulario {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+/* ADAPTACIÓN A PANTALLAS CHICAS */
+@media (max-width: 800px) {
+    main#contacto {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #bienvenida,
+    #contacto #formulario {
+        width: 100%;
+        max-width: 524px;
+    }
+}
+
+/* FORMULARIO */
+
+/* CONTENEDOR DEL FORMULARIO */
+#formulario {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* CAJA DEL FORMULARIO */
+#formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+    width: 524px;
+    max-width: 100%;
+    height: 616px;
+    padding: 30px;
+    box-sizing: border-box;
+
+    background: #FFFFFF40;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #FFFFFF80;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 12px;
+}
+
+/* ETIQUETAS */
+#formulario label {
+    font-family: "PT Serif", serif;
+    color: #3D2132;
+    font-size: 17px;
+}
+
+/* CAMPOS DE TEXTO */
+#formulario input[type="text"],
+#formulario input[type="email"] {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(170, 42, 129, 0.35);
+    border-radius: 8px;
+
+    font-family: "PT Serif", serif;
+}
+
+#formulario .campo-mensaje,
+#formulario .campo-archivo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    width: 50%;
+    min-width: 0;
+    gap: 10px;
+}
+
+/* MENSAJE Y ARCHIVO UNO AL LADO DEL OTRO */
+#formulario .mensaje-archivo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+}
+
+
+/* ÁREA PARA ESCRIBIR EL MENSAJE */
+#formulario textarea {
+    display: flex;
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(170, 42, 129, 0.35);
+    border-radius: 8px;
+
+    font-family: "PT Serif", serif;
+    font-size: 15px;
+    color: #3D2132;
+    resize: vertical;
+}
+
+/* BOTÓN PARA ADJUNTAR ARCHIVO */
+#formulario input[type="file"] {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    font-family: "PT Serif", serif;
+    font-size: 12px;
+}
+
+/* BOTÓN ENVIAR */
+#formulario input[type="submit"] {
+    display: flex;
+    align-self: Center;
+    padding: 12px 30px;
+
+    border: none;
+    border-radius: 25px;
+    background: #FA9488;
+    color: #aa2a81;
+
+    font-family: "PT Serif", serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+#formulario input[type="submit"]:hover {
+    background: #aa2a81;
 }

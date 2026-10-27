@@ -1,0 +1,105 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Cande Arce</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+</head>
+
+<body class="contacto">
+
+    <header>
+        <div class="contenedor">
+
+            <a href="index.html#inicio" class="logo">
+                <img src="img/logo_metalizado.png" alt="Logo de Cande Arce" width="60" height="60">
+            </a>
+
+            <nav class="menu">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="sobre_mi.html">Sobre mí</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="contacto">
+
+        <section id="bienvenida">
+            <h1>Las buenas ideas empiezan con un mensaje</h1>
+            <p>¿Tenés un proyecto que te gustaría hacer realidad o una propuesta para compartir? ¡Contame! Estoy a un
+                mensajito de distancia. Y tranqui, no muerdo. </p>
+        </section>
+
+        <section id="formulario">
+            <form method="POST" target="_blank" enctype="multipart/form-data"
+                action="mailto:arcecandela.f@gmail.com?subject=email enciado desde el formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="Nombre" id="nombre" placeholder="Nombre completo" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="nombre del proyecto">Nombre del proyecto:</label>
+                <input type="text" name="Nombre del proyecto" id="nombre-del-proyecto"
+                    placeholder="Nombre del proyecto y rubro" required>
+
+                <div class="mensaje-archivo">
+
+                    <div class="campo-mensaje">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required>Hola Cande, me gustaría hablar de...</textarea>
+                    </div>
+
+                    <div class="campo-archivo">
+                        <label for="archivo">Adjuntar archivo:</label>
+                        <input type="file" name="archivo" id="archivo">
+                    </div>
+
+                </div>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer id="pie-de-pagina">
+
+        <div class="logo-footer">
+            <img src="img/mi_logo.gif" alt="Logo de Cande Arce" width="150" height="150">
+        </div>
+
+        <div class="titulo-footer">
+            <h1>
+                Trabajemos juntos
+                Contactanos
+            </h1>
+        </div>
+
+        <div class="contacto-footer">
+            <p>+54 11 3344 5566</p>
+            <p>arcecandela.f@gmail.com</p>
+
+            <div class="redes-footer">
+                <img src="img/insta.png" alt="Instagram" width="30" height="30">
+                <img src="img/whatsapp.png" alt="WhatsApp" width="30" height="30">
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
