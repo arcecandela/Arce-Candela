@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Cande Arce</title>
     <link rel="stylesheet" href="estilos.css">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
     </style>
-    <!--te falta una etiqueta importante para que funcione @media -->
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 </head>
 
@@ -16,12 +16,12 @@
     <header>
         <div class="contenedor">
 
-            <a href="index.html#inicio" class="logo">
+            <a href="index.html" class="logo">
                 <img src="img/logo_metalizado.png" alt="Logo de Cande Arce" width="60" height="60">
             </a>
 
-            <nav class="menu">
-                <a href="index.html#inicio">Inicio</a> <!--no está bueno que sumes el #inicio porque se hace un scroll chiquitito y queda como encimado el header, lo mismo con el link del iso anterior--> 
+            <nav>
+                <a href="index.html">Inicio</a>
                 <a href="sobre_mi.html">Sobre mí</a>
                 <a href="proyectos.html">Proyectos</a>
                 <a href="contacto.html">Contacto</a>
@@ -33,99 +33,140 @@
     <main>
         <section id="inicio">
             <div class="presentacion">
-                <div class="texto-presentacion"> <!--hay una etiqueta más feliz para contenedor de títulos que es hgroup, así no usas tanto div-->
-                    <h1>Bienvenidos a<br>mi universo gráfico</h1> <!--no se pueden usar br-->
-                    <h4>¡Te invito a conocer mis trabajos!</h4> <!--este está un poco chiquito de tamaño, además es el primer subtitulo que hay, aunque hayan otros más grandes más adelante mejor semánticamente es un h2-->
-                </div>
-                <img src="img/mi_logo.gif" alt="Mi logo animado">
+                <hgroup="texto-presentacion">
+                    <h1>Bienvenidos a mi universo gráfico</h1>
+                    <h3>¡Te invito a conocer mis trabajos!</h3>
+                    </hgroup>
+                    <img src="img/mi_logo.gif" alt="Mi logo animado">
             </div>
 
             <div class="contenedor-flecha">
-                <a href="#sobre-mi" class="enlace-flecha">
+                <a href="#sobre-mi-diseñadora" class="enlace-flecha">
                     <img src="img/fecha_para_abajo.svg" alt="Ir a Hola, soy Cande" class="flecha-abajo" width="477px"
                         height="477px">
                 </a>
             </div>
         </section>
 
-        <section id="sobre-mi" class="sobre-mi">
-            <h1>Hola, soy Cande</h1> <!--el h1 es una etiqueta que se debe utilizar una sola vez en todo un sitio web-->
-            <p>
-                Soy estudiante de Diseño y Comunicación Visual y estoy
-                construyendo mi propio universo creativo, convirtiendo
-                ideas en proyectos. ¿Querés conocer un poco de lo que
-                hago? Te invito a chusmear mis trabajos.
-            </p>
-        </section>
+        <section id="sobre-mi-diseñadora">
+            <div class="presentacion">
+                <h2>Hola, soy Cande</h2>
+                <p>
+                    Soy estudiante de Diseño y Comunicación Visual y estoy
+                    construyendo mi propio universo creativo, convirtiendo
+                    ideas en proyectos. ¿Querés conocer un poco de lo que
+                    hago? Te invito a chusmear mis trabajos.
+                </p>
+            </div>
 
-        <section id="diseño-gráfico"> <!--no se pueden usar tildes!-->
-            <h2>Diseños destacados</h2>
 
-            <div id="contenedor-tarjetas">
-                <div class="tarjeta">
-                    <div class="tarjeta-contenido">
-                        <div class="tarjeta-frente"> <img src="img/trabajo-nodos.png"
-                                alt="Trabajo de pluma realizado en Illustrator">
-                            <p>Ejercicio de herramienta Pluma realizado en Adobe Illustrator.</p>
-                        </div>
-                        <div class="tarjeta-dorso"> <img src="img/afiche-tipo2.png" alt="Afiche de Tipografía 2">
-                            <p>Afiche desarrollado para la materia Tipografía 2.</p>
+            <div id="diseños-destacados">
+                <h3>Diseños destacados</h3>
+
+                <div id="contenedor-tarjetas">
+
+                    <div class="tarjeta">
+                        <div class="tarjeta-contenido">
+
+                            <div class="tarjeta-frente">
+                                <figure>
+                                    <img src="img/trabajo-nodos.png" alt="Trabajo de pluma realizado en Illustrator">
+                                    <figcaption>
+                                        Ejercicio de herramienta Pluma realizado en Adobe Illustrator.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="tarjeta-dorso">
+                                <figure>
+                                    <img src="img/afiche-tipo2.png" alt="Afiche de Tipografía 2">
+                                    <figcaption>
+                                        Afiche desarrollado para la materia Tipografía 2.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
                         </div>
                     </div>
-                </div>
 
-                <div class="tarjeta">
-                    <div class="tarjeta-contenido">
-                        <div class="tarjeta-frente"> <img src="img/juego de mesa-afuera.jpeg"
-                                alt="Diseño exterior del juego de mesa Reliquias Robadas y su tablero">
-                            <p>Diseño exterior del juego de mesa “Reliquias Robadas” y su tablero.</p>
-                        </div>
-                        <div class="tarjeta-dorso"> <img src="img/juego de mesa-adentro.jpeg"
-                                alt="Diseño interior y componentes del juego Reliquias Robadas">
-                            <p>Diseño interior y componentes del juego “Reliquias Robadas”.</p>
+                    <div class="tarjeta">
+                        <div class="tarjeta-contenido">
+
+                            <div class="tarjeta-frente">
+                                <figure>
+                                    <img src="img/juego de mesa-afuera.jpeg"
+                                        alt="Diseño exterior del juego de mesa Reliquias Robadas y su tablero">
+                                    <figcaption>
+                                        Diseño exterior del juego de mesa “Reliquias Robadas” y su tablero.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="tarjeta-dorso">
+                                <figure>
+                                    <img src="img/juego de mesa-adentro.jpeg"
+                                        alt="Diseño interior y componentes del juego Reliquias Robadas">
+                                    <figcaption>
+                                        Diseño interior y componentes del juego “Reliquias Robadas”.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
                         </div>
                     </div>
-                </div>
 
-                <div class="tarjeta">
-                    <div class="tarjeta-contenido">
+                    <div class="tarjeta">
+                        <div class="tarjeta-contenido">
 
-                        <div class="tarjeta-frente"> <img src="img/portada-menu.png"
-                                alt="Portada y contraportada del menú de Midnight Raven"> <!--hay una etiqueta que es mejor para contener una imagen con su descripción-->
-                            <p>Diseño de portada y contraportada para el menú de Midnight Raven.</p>
-                        </div>
-                        <div class="tarjeta-dorso"> <img src="img/contenido-menu.png"
-                                alt="Página interior del menú de Midnight Raven">
-                            <p>Diseño de página interior para el menú de Midnight Raven.</p>
+                            <div class="tarjeta-frente">
+                                <figure>
+                                    <img src="img/portada-menu.png"
+                                        alt="Portada y contraportada del menú de Midnight Raven">
+                                    <figcaption>
+                                        Diseño de portada y contraportada para el menú de Midnight Raven.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="tarjeta-dorso">
+                                <figure>
+                                    <img src="img/contenido-menu.png" alt="Página interior del menú de Midnight Raven">
+                                    <figcaption>
+                                        Diseño de página interior para el menú de Midnight Raven.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
-        </section>
 
+        </section>
     </main>
 
     <footer id="pie-de-pagina">
+        <img src="img/mi_logo.gif" alt="Logo de Cande Arce" width="150" height="150">
 
-        <div class="logo-footer"> <!--no es necesario que esté contenido con un div porque la img es autosuficiente y si lo sacás no hay nungún cambio-->
-            <img src="img/mi_logo.gif" alt="Logo de Cande Arce" width="150" height="150">
-        </div>
+        <a href="contacto.html" class="titulo-footer">
+            <h2>Trabajemos juntos</h2>
+        </a>
 
-        <div class="titulo-footer"><!--no es necesario que esté contenido con un div-->
-            <a href="contacto.html">
-                <h1>Trabajemos juntos</h1><!--no pueden haber más h1-->
-            </a>
-        </div>
-
-        <div class="contacto-footer"> <!--hay una etiqueta mejor para esto y es address que contiene elementos que son de contacto-->
+        <address class="contacto-footer">
             <p>+54 11 3344 5566</p>
             <p>arcecandela.f@gmail.com</p>
 
-            <div class="redes-footer"> <!--si estos van a ser enlaces configuralos como tal-->
-                <img src="img/insta.png" alt="Instagram" width="30" height="30"> 
-                <img src="img/whatsapp.png" alt="WhatsApp" width="30" height="30">
+            <div class="redes-footer">
+                <a href="https://www.instagram.com/candea_18/" target="_blank">
+                    <img src="img/insta.png" alt="Instagram" width="30" height="30">
+                </a>
+
+                <a href="https://wa.me/541133445566" target="_blank">
+                    <img src="img/whatsapp.png" alt="WhatsApp" width="30" height="30">
+                </a>
             </div>
-        </div>
+        </address>
 
     </footer>
 

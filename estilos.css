@@ -1,4 +1,3 @@
-/*CSS DOCUMENT*/
 @charset "UTF-8";
 
 h2 {
@@ -16,7 +15,6 @@ h3 {
     font-weight: 700;
     font-style: italic;
     color: #aa2a81;
-    text-align: justify;
 }
 
 h4 {
@@ -25,7 +23,6 @@ h4 {
     font-style: italic;
     font-size: 17px;
     color: #3D2132;
-    text-align: justify; /*innecesasrio*/
 }
 
 p {
@@ -57,38 +54,28 @@ h1 {
     color: #AA2881;
     font-family: "LastChristmas", sans-serif;
     font-size: 64px;
-    font-style: normal; /*no es necesario*/
     font-weight: 400;
-    line-height: normal; /*no es necesario*/
 }
 
 /* =========================================
-1. ESTILOS GENERALES
+ESTILOS GENERALES
    ========================================= */
 /*Se empieza a dar formato al header*/
 header {
-    position: fixed; 
-    top: 0; /*no es necesario*/
-    left: 0; /*no es necesario*/
+    position: fixed;
     z-index: 1000;
-
-    display: flex; /*no es necesario*/
-    justify-content: center; /*no es necesario*/
-    align-items: center; /*no es necesario*/
     width: 100%;
     padding: 12px 20px;
 
     /* Efecto glass */
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /*esta propiedad no va porque es exactamente la de arriba, en el inspector no está funcionando y logra lo mismo*/
     background: #FFFFFF0A;
-    border: 1px solid #FFFFFF99; /*como desición de diseño este borde no te está sumando, a lo sumo lo aplicaría sólo en el bottom, pero se va del partido conceptual*/
 }
 
 /* Organización del logo y el menú */
 header .contenedor {
     display: flex;
-    align-items: center; /*no es necesario*/
+    align-items: center;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
@@ -101,37 +88,20 @@ nav {
     gap: 30px;
 }
 
-/* Tamaño del logo */
-.logo img {
-    display: block;
-    width: 60px; /*ancho y alto no son necesarios porque ya lo pusiste desde html*/
-    height: 60px;
-    object-fit: contain;
-}
-
-/* Enlaces del menú */
-.menu { /*esto es igual al nav de la línea 99, no está bien repetir selectores*/
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.menu a {
+nav a {
     color: #aa2a81;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 18px
 }
 
-.menu a:hover {
+nav a:hover {
     color: #ffffff;
 }
 
-/* Organización del encabezado */
-header .contenedor { /*estas mismas propiedades las estás palicando en la línea 88, veo que en general en todo el código estás repitiendo selectores, cosa que no debería ocurrir*/
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+/* Tamaño del logo */
+.logo img {
+    display: block;
+    object-fit: contain;
 }
 
 /* FOOTER */
@@ -144,32 +114,12 @@ header .contenedor { /*estas mismas propiedades las estás palicando en la líne
     gap: 250px;
     padding: 30px 40px;
     background-color: #aa2a81;
-    box-sizing: border-box; /*repetido*/
 }
 
-.titulo-footer h1 {
+.titulo-footer h2 {
     color: #F3B5E1;
     text-align: center;
     font-size: 32px;
-}
-
-.contacto-footer p {
-    color: #F3B5E1;
-}
-
-/* LOGO */
-.logo-footer { /*ninguna de estas propiedades está generando cambios*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* TÍTULO Y DERECHOS */
-.titulo-footer {/*ninguna de estas propiedades está generando cambios*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 /* CONTACTO */
@@ -179,12 +129,10 @@ header .contenedor { /*estas mismas propiedades las estás palicando en la líne
     flex-direction: column;
     align-items: center;
     gap: 14px;
-    margin: 0;
 }
 
-.contacto-footer h2,
 .contacto-footer p {
-    display: flex; /*innecesario*/
+    color: #F3B5E1;
     margin: 0;
 }
 
@@ -203,40 +151,18 @@ a {
     font: inherit;
     text-decoration: none;
 }
-/* =========================================
-ESTILOS DEL SOBRE MI
-   ========================================= */
 
-
-/* FONDO EXCLUSIVO DE SOBRE MÍ */
-body.sobre-mi {
-    background-image: url("img/fondo_sobre_mi.png");
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-}
-
-/* CONFIGURACIÓN GENERAL */ /*las configuraciones generales se hacen al principio de todo para que se puedan sobreescribir en casos particulares más adelante porque sino acá esto pisa de nuevo todo lo que hiciste anteriormente, también es raro aplicarlo a html, salvo el scroll smoot, siempre van en el selector universal*/
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
 }
 
-body {
-    background-color: #f9ebeb;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* LISTAS */
 li {
     list-style: none;
 }
@@ -246,9 +172,22 @@ li::before {
     color: #aa2a81;
 }
 
+/* =========================================
+ESTILOS DEL SOBRE MI
+   ========================================= */
+
+body.sobre-mi {
+    background-image: url("img/fondo_sobre_mi.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
 /* CONTENIDO PRINCIPAL */
 main {
-    display: flex; /*por algún motivo ninguna de las propiedades de flex son útiles, si las quitamos todo se ve exactamente igual*/
+    display: flex;
+    /*por algún motivo ninguna de las propiedades de flex son útiles, si las quitamos todo se ve exactamente igual*/
     flex: 1;
     flex-direction: column;
     align-items: center;
@@ -257,22 +196,27 @@ main {
 
 /* SECCIÓN YO */
 #yo {
-    display: inline-flex; /*por qué inline?*/
+    display: flex;
     align-items: center;
     gap: 67px;
+    padding: 40px;
+    padding-bottom: 80px;
 }
 
 #yo img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 15px;
 }
 
 .presentacion {
     display: flex;
-    width: 524px; /*esto va a traer más problemas que felicidad*/
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 40px;
+    width: 80%;
+    max-width: 33rem;
 }
 
 /* CONTENEDOR DE LOS CUADRADOS */
@@ -280,9 +224,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 26px 52px;
-    width: 926px; /*en realidad esto debería ser al revés, el max-width que sea una medida fija y el ancho de 100%*/
-    max-width: 100%;
-    margin: 190px auto 0; /*alerta de margin enorme*/
+    width: 100%;
+    max-width: 926px;
+    margin: 100px;
 }
 
 /* ESTILO GENERAL DE LOS CUATRO CUADRADOS */
@@ -294,34 +238,18 @@ main {
     flex-direction: column;
     flex: 0 0 437px;
     height: 280px;
-    overflow: hidden; /*por qué?*/
     background: #FFFFFF0A;
-    backdrop-filter: blur(12px); /*acá no está generando nada*/
-    -webkit-backdrop-filter: blur(12px); /*repetido*/
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid #FFFFFF99;
     border-radius: 12px;
     padding: 22px 21px;
-}
-
-/* FORMACIÓN, EXPERIENCIA Y HABILIDADES */
-#cuadrado-1,
-#cuadrado-2,
-#cuadrado-4 {
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-/* DIFERENCIAS DEL CUADRADO 1 */
-#cuadrado-1 { 
-    padding: 22px 45px 23px 21px; /*no genera cambios*/
-    gap: 10px; /*no genera cambios*/
-    border-radius: 20px; /*por qué solo uno tiene este radio distinto?*/
 }
 
 /* HERRAMIENTAS: CONTENIDO CENTRADO */
 #cuadrado-3 {
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 /* FORMACIÓN ACADÉMICA */
@@ -331,62 +259,7 @@ main {
     align-items: flex-start;
     width: 100%;
     gap: 12px;
-}
-
-.textos-formacion {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 16px;
-}
-
-.colegio,
-.universidad,
-.detalles-colegio,
-.detalles-universidad {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.colegio,
-.universidad {
-    gap: 6px;
-}
-
-.detalles-colegio,
-.detalles-universidad {
-    gap: 4px;
-}
-
-/* TEXTOS DE LOS CUATRO CUADRADOS */
-#cuadrado-1 h3,
-#cuadrado-1 h4,
-#cuadrado-1 p,
-#cuadrado-2 h3,
-#cuadrado-2 h4,
-#cuadrado-2 p,
-#cuadrado-3 h3,
-#cuadrado-3 h4,
-#cuadrado-3 p,
-#cuadrado-4 h3,
-#cuadrado-4 h4,
-#cuadrado-4 p,
-#cuadrado-2 ul,
-#cuadrado-3 ul,
-#cuadrado-4 ul {
-    margin: 0;
-    padding: 0;
-}
-
-/* INTERLINEADO DE FORMACIÓN */
-#cuadrado-1 h3,
-#cuadrado-1 h4,
-#cuadrado-1 p {
-    line-height: 1.5;
-    text-align: left;
+    line-height: 1.70;
 }
 
 /* TÍTULOS */
@@ -396,26 +269,10 @@ main {
     margin-bottom: 12px;
 }
 
-/* SUBTÍTULOS */
-#cuadrado-3 h4,
-#cuadrado-4 h4 {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-}
-
-/* LISTAS DE EXPERIENCIA Y HABILIDADES */
+/* Habilidades personales */
 #cuadrado-2 ul,
 #cuadrado-4 ul {
     padding-left: 18px;
-}
-
-/* LISTAS DE LOS CUADRADOS */
-#cuadrado-2 li,
-#cuadrado-3 li,
-#cuadrado-4 li {
-    margin-bottom: 5px;
-    font-size: 0.88rem;
-    line-height: 1.3;
 }
 
 /* SECCIÓN DE HOBBIES */
@@ -423,7 +280,8 @@ body.sobre-mi #hobbies {
     width: 100%;
     max-width: 1100px;
     padding: 0 20px;
-    margin-top: 150px; /*alerta de margins muy grandes, mejor resolvelo con height vh*/
+    margin-top: 150px;
+    /*alerta de margins muy grandes, mejor resolvelo con height vh*/
     margin-bottom: 200px;
 }
 
@@ -471,35 +329,21 @@ body.sobre-mi #hobbies iframe {
     border-radius: 12px;
 }
 
-
-
 /* =========================================
 ESTILOS DEL INDEX
    ========================================= */
 
 /* Fondo exclusivo del index */
 body.portfolio {
-    background-image: url("img/fondo_degradado.png"); /*te va a convenir que el gradiente lo manejes por medio de código, esto lo configuras y copias desde figma, así el gradiente se genera desde el código y no se carga como imagen, haciendo esto sólo te preocupás por configurar cada gradiente por separado y el resto de las propiedades no hace falta aplicarlas. por otro lado, para el destello de abajo del index, lo mejor en ese caso es ponerlo como bg en la sección de diseños destacados*/
+    background-image: url("img/fondo_degradado.png");
+    /*te va a convenir que el gradiente lo manejes por medio de código, esto lo configuras y copias desde figma, así el gradiente se genera desde el código y no se carga como imagen, haciendo esto sólo te preocupás por configurar cada gradiente por separado y el resto de las propiedades no hace falta aplicarlas. por otro lado, para el destello de abajo del index, lo mejor en ese caso es ponerlo como bg en la sección de diseños destacados*/
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
 
-/* Como se organiza la presentación */
 
-body.portfolio .presentacion { /*estás repitiendo el selecto en la línea 271 y algunas propiedades son distintas, vas a tener que elegir cuál es la que va*/
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    width: 100%; /*no es necesario*/
-}
-
-body.portfolio .texto-presentacion {
-    flex: 0 1 auto;
-}
 
 body.portfolio .presentacion img {
     width: 400px;
@@ -507,13 +351,13 @@ body.portfolio .presentacion img {
     flex: 0 0 auto;
 }
 
-
 /* FLECHA HACIA ABAJO */
 body.portfolio .contenedor-flecha {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 160px; /*alerta de margin grande, hay mejores formas de hacerlo*/
+    margin-top: 160px;
+    /*alerta de margin grande, hay mejores formas de hacerlo*/
     margin-bottom: 40px;
 }
 
@@ -534,73 +378,38 @@ html {
     scroll-behavior: smooth;
 }
 
-/* SEGUNDA SECCIÓN: SOBRE MÍ */
-body.portfolio .sobre-mi {
-    display: flex;
-    width: 100%;
-    max-width: 1110px;
-    min-height: 85vh; /*es raro establecer que una altura mínima sea tan grande, casi siempre se pone un número pequeño y en px, pero con height directamente es mucho mejor. por otro lado, a nivel diseño se siente un poco vacío, yo utilizaría una altura de 75 porque la cantidad de elementos no se justifica que tenga taanto espacio, revisá las capturas de la devolución*/
-    box-sizing: border-box;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 120px;
-    padding: 40px 20px;
-    margin: 0 auto;
-}
-
-/* TÍTULO DE LA SEGUNDA SECCIÓN */
-body.portfolio .sobre-mi h1 { /*más allá de que está mal tener varios h1, también tenés el error de tener muchas propiedades repetidas que ya se heredan del h1 gral en la lína 56*/
-    display: flex; /*innecesario*/
-    width: 100%;
-    height: auto; /*innecesario*/
-    justify-content: flex-end; /*innecesario*/
-    margin: 0; /*inncesario*/
-    text-align: right;
-}
-
-/* TEXTO DE LA SEGUNDA SECCIÓN */
-body.portfolio .sobre-mi p { /*otra vez cosas que se repiten*/
-    display: flex; /*innecesario*/
-    width: 100%; /*innecesario*/
-    max-width: 600px;
-    margin: 0; /*innecesario*/
-    line-height: 1.6;
-}
-
-
-/* SECCIÓN DISEÑO GRÁFICO */
-#diseño-gráfico {
+/* SEGUNDA SECCIÓN: SOBRE MÍ DISEÑADORA */
+#sobre-mi-diseñadora {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 0 30px 30px;
-    margin-top: -100px; /*salvo excepciones muy muy particulares no se pueden usar números negativos, este no es el caso*/
+    gap: 70px;
+    padding: 40px 20px;
 }
 
-/* contenedor de tarjetas */
+/* SECCIÓN DISEÑOS DESTACADOS */
+#diseños-destacados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CONTENEDOR DE TARJETAS */
 #contenedor-tarjetas {
     display: flex;
-    justify-content: center;
     gap: 60px;
-    padding: 20px;
-    margin-bottom: 100px;
 }
 
-/* tarjeta */
+/* TARJETA */
 .tarjeta {
-    flex: none; /*innecesario*/
     width: 250px;
     height: 390px;
-    perspective: 1000px;
     margin-top: 20px;
 }
 
-/* contenido y giro */
+/* CONTENIDO Y GIRO */
 .tarjeta-contenido {
-    position: relative;
-    width: 100%;
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
@@ -610,31 +419,35 @@ body.portfolio .sobre-mi p { /*otra vez cosas que se repiten*/
     transform: rotateY(180deg) scale(1.1);
 }
 
-/* frente y dorso */
+/* FRENTE Y DORSO */
 .tarjeta-frente,
 .tarjeta-dorso {
     position: absolute;
-    width: 100%; /*no afecta*/
     height: 100%;
-    display: flex; /*innecesario*/
-    flex-direction: column; /*innecesario*/
-    align-items: center; /*innecesario*/
     padding: 18px;
-    box-sizing: border-box; /*repetido*/
     background: #FFFFFF40;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /*innecesario*/
     border: 1px solid #FFFFFF80;
     backface-visibility: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
     border-radius: 12px;
 }
 
+/* DORSO DE LA TARJETA */
 .tarjeta-dorso {
     transform: rotateY(180deg);
 }
 
-/* imágenes de los trabajos */
+/* FIGURE */
+.tarjeta-frente figure,
+.tarjeta-dorso figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* IMÁGENES DE LOS TRABAJOS */
 .tarjeta-frente img,
 .tarjeta-dorso img {
     display: block;
@@ -643,22 +456,22 @@ body.portfolio .sobre-mi p { /*otra vez cosas que se repiten*/
     object-fit: cover;
 }
 
-/* epígrafes */
-.tarjeta-frente p,
-.tarjeta-dorso p {
+/* EPÍGRAFES */
+.tarjeta-frente figcaption,
+.tarjeta-dorso figcaption {
     position: absolute;
-    bottom: 18px;
-    left: 5%;
+    bottom: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     height: 54px;
-    margin: 0;
     text-align: center;
     font-size: 14px;
     line-height: 1.3;
 }
+
 
 /* =========================================
 ESTILOS DEL PROYECTOS
@@ -670,14 +483,16 @@ body.proyectos {
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
+
 #proyectos {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    box-sizing: border-box; /*repetido*/
     margin-top: 30px;
+    gap: 70px;
 }
+
 /* GALERÍA DE PROYECTOS */
 .galeria {
     display: flex;
@@ -685,9 +500,7 @@ body.proyectos {
     justify-content: center;
     gap: 30px;
     width: 100%;
-    max-width: 824px; /*esto es muy chiquitito, en pantallas grandes queda mucho aire al rededor*/
-    box-sizing: border-box;
-    margin: 0 auto;
+    max-width: 1250px;
     padding: 40px 20px;
 }
 
@@ -700,13 +513,11 @@ body.proyectos {
     width: 377px;
     max-width: 100%;
     min-height: 489px;
-    box-sizing: border-box;
     padding: 37px;
 
     /* Efecto glass */
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 12px;
 }
@@ -746,9 +557,11 @@ body.proyectos {
 .imagen-proyecto:hover::after {
     opacity: 0;
 }
+
 .imagen-proyecto:hover img {
     filter: none;
 }
+
 .imagen-proyecto:hover .texto-imagen {
     opacity: 0;
 }
@@ -759,6 +572,7 @@ body.proyectos {
     color: #AA2881;
     font-size: 24px;
 }
+
 .polaroid p {
     margin: 0 0 18px;
     color: #3D2132;
@@ -777,6 +591,7 @@ body.proyectos {
     transition: background 0.3s ease, color 0.3s ease;
     border-radius: 40px;
 }
+
 .boton-behance:hover {
     background: white;
     color: #AA2881;
@@ -788,7 +603,6 @@ body.proyectos {
     position: fixed;
     inset: 0;
     z-index: 2000;
-    box-sizing: border-box;
     overflow: auto;
     padding: 40px 20px;
     background: rgba(20, 10, 20, 0.95);
@@ -848,8 +662,6 @@ body.contacto {
     width: 579px;
 }
 
-
-
 /* CONTENEDOR PRINCIPAL */
 main#contacto {
     display: flex;
@@ -861,7 +673,6 @@ main#contacto {
     max-width: 1200px;
     margin: 0 auto;
     padding: 150px 60px;
-    box-sizing: border-box;
 }
 
 /* SECCIÓN DE BIENVENIDA */
@@ -871,6 +682,7 @@ main#contacto {
     justify-content: center;
     flex: 1;
     max-width: 500px;
+    gap: 70px;
 }
 
 /* SECCIÓN DEL FORMULARIO */
@@ -896,8 +708,6 @@ main#contacto {
 }
 
 /* FORMULARIO */
-
-/* CONTENEDOR DEL FORMULARIO */
 #formulario {
     display: flex;
     justify-content: center;
@@ -915,11 +725,9 @@ main#contacto {
     max-width: 100%;
     height: 616px;
     padding: 30px;
-    box-sizing: border-box;
 
     background: #FFFFFF40;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border: 1px solid #FFFFFF80;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
     border-radius: 12px;
@@ -938,7 +746,6 @@ main#contacto {
     display: flex;
     width: 100%;
     padding: 12px;
-    box-sizing: border-box;
 
     background: rgba(255, 255, 255, 0.55);
     border: 1px solid rgba(170, 42, 129, 0.35);
@@ -967,14 +774,13 @@ main#contacto {
     width: 100%;
 }
 
-
 /* ÁREA PARA ESCRIBIR EL MENSAJE */
 #formulario textarea {
     display: flex;
     width: 100%;
     min-height: 150px;
     padding: 12px;
-    box-sizing: border-box;
+    ;
 
     background: rgba(255, 255, 255, 0.55);
     border: 1px solid rgba(170, 42, 129, 0.35);
