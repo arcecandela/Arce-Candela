@@ -25,7 +25,7 @@ h4 {
     font-style: italic;
     font-size: 17px;
     color: #3D2132;
-    text-align: justify;
+    text-align: justify; /*innecesasrio*/
 }
 
 p {
@@ -57,9 +57,9 @@ h1 {
     color: #AA2881;
     font-family: "LastChristmas", sans-serif;
     font-size: 64px;
-    font-style: normal;
+    font-style: normal; /*no es necesario*/
     font-weight: 400;
-    line-height: normal;
+    line-height: normal; /*no es necesario*/
 }
 
 /* =========================================
@@ -67,28 +67,28 @@ h1 {
    ========================================= */
 /*Se empieza a dar formato al header*/
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed; 
+    top: 0; /*no es necesario*/
+    left: 0; /*no es necesario*/
     z-index: 1000;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /*no es necesario*/
+    justify-content: center; /*no es necesario*/
+    align-items: center; /*no es necesario*/
     width: 100%;
     padding: 12px 20px;
 
     /* Efecto glass */
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /*esta propiedad no va porque es exactamente la de arriba, en el inspector no está funcionando y logra lo mismo*/
     background: #FFFFFF0A;
-    border: 1px solid #FFFFFF99;
+    border: 1px solid #FFFFFF99; /*como desición de diseño este borde no te está sumando, a lo sumo lo aplicaría sólo en el bottom, pero se va del partido conceptual*/
 }
 
 /* Organización del logo y el menú */
 header .contenedor {
     display: flex;
-    align-items: center;
+    align-items: center; /*no es necesario*/
     justify-content: space-between;
     gap: 20px;
     width: 100%;
@@ -104,13 +104,13 @@ nav {
 /* Tamaño del logo */
 .logo img {
     display: block;
-    width: 60px;
+    width: 60px; /*ancho y alto no son necesarios porque ya lo pusiste desde html*/
     height: 60px;
     object-fit: contain;
 }
 
 /* Enlaces del menú */
-.menu {
+.menu { /*esto es igual al nav de la línea 99, no está bien repetir selectores*/
     display: flex;
     align-items: center;
     gap: 30px;
@@ -127,7 +127,7 @@ nav {
 }
 
 /* Organización del encabezado */
-header .contenedor {
+header .contenedor { /*estas mismas propiedades las estás palicando en la línea 88, veo que en general en todo el código estás repitiendo selectores, cosa que no debería ocurrir*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -144,7 +144,7 @@ header .contenedor {
     gap: 250px;
     padding: 30px 40px;
     background-color: #aa2a81;
-    box-sizing: border-box;
+    box-sizing: border-box; /*repetido*/
 }
 
 .titulo-footer h1 {
@@ -158,14 +158,14 @@ header .contenedor {
 }
 
 /* LOGO */
-.logo-footer {
+.logo-footer { /*ninguna de estas propiedades está generando cambios*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 /* TÍTULO Y DERECHOS */
-.titulo-footer {
+.titulo-footer {/*ninguna de estas propiedades está generando cambios*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,7 +184,7 @@ header .contenedor {
 
 .contacto-footer h2,
 .contacto-footer p {
-    display: flex;
+    display: flex; /*innecesario*/
     margin: 0;
 }
 
@@ -217,7 +217,7 @@ body.sobre-mi {
     background-attachment: scroll;
 }
 
-/* CONFIGURACIÓN GENERAL */
+/* CONFIGURACIÓN GENERAL */ /*las configuraciones generales se hacen al principio de todo para que se puedan sobreescribir en casos particulares más adelante porque sino acá esto pisa de nuevo todo lo que hiciste anteriormente, también es raro aplicarlo a html, salvo el scroll smoot, siempre van en el selector universal*/
 * {
     box-sizing: border-box;
 }
@@ -248,7 +248,7 @@ li::before {
 
 /* CONTENIDO PRINCIPAL */
 main {
-    display: flex;
+    display: flex; /*por algún motivo ninguna de las propiedades de flex son útiles, si las quitamos todo se ve exactamente igual*/
     flex: 1;
     flex-direction: column;
     align-items: center;
@@ -257,7 +257,7 @@ main {
 
 /* SECCIÓN YO */
 #yo {
-    display: inline-flex;
+    display: inline-flex; /*por qué inline?*/
     align-items: center;
     gap: 67px;
 }
@@ -270,7 +270,7 @@ main {
 
 .presentacion {
     display: flex;
-    width: 524px;
+    width: 524px; /*esto va a traer más problemas que felicidad*/
     flex-direction: column;
     align-items: flex-start;
 }
@@ -280,9 +280,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 26px 52px;
-    width: 926px;
+    width: 926px; /*en realidad esto debería ser al revés, el max-width que sea una medida fija y el ancho de 100%*/
     max-width: 100%;
-    margin: 190px auto 0;
+    margin: 190px auto 0; /*alerta de margin enorme*/
 }
 
 /* ESTILO GENERAL DE LOS CUATRO CUADRADOS */
@@ -294,10 +294,10 @@ main {
     flex-direction: column;
     flex: 0 0 437px;
     height: 280px;
-    overflow: hidden;
+    overflow: hidden; /*por qué?*/
     background: #FFFFFF0A;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px); /*acá no está generando nada*/
+    -webkit-backdrop-filter: blur(12px); /*repetido*/
     border: 1px solid #FFFFFF99;
     border-radius: 12px;
     padding: 22px 21px;
@@ -312,10 +312,10 @@ main {
 }
 
 /* DIFERENCIAS DEL CUADRADO 1 */
-#cuadrado-1 {
-    padding: 22px 45px 23px 21px;
-    gap: 10px;
-    border-radius: 20px;
+#cuadrado-1 { 
+    padding: 22px 45px 23px 21px; /*no genera cambios*/
+    gap: 10px; /*no genera cambios*/
+    border-radius: 20px; /*por qué solo uno tiene este radio distinto?*/
 }
 
 /* HERRAMIENTAS: CONTENIDO CENTRADO */
@@ -423,7 +423,7 @@ body.sobre-mi #hobbies {
     width: 100%;
     max-width: 1100px;
     padding: 0 20px;
-    margin-top: 150px;
+    margin-top: 150px; /*alerta de margins muy grandes, mejor resolvelo con height vh*/
     margin-bottom: 200px;
 }
 
@@ -479,7 +479,7 @@ ESTILOS DEL INDEX
 
 /* Fondo exclusivo del index */
 body.portfolio {
-    background-image: url("img/fondo_degradado.png");
+    background-image: url("img/fondo_degradado.png"); /*te va a convenir que el gradiente lo manejes por medio de código, esto lo configuras y copias desde figma, así el gradiente se genera desde el código y no se carga como imagen, haciendo esto sólo te preocupás por configurar cada gradiente por separado y el resto de las propiedades no hace falta aplicarlas. por otro lado, para el destello de abajo del index, lo mejor en ese caso es ponerlo como bg en la sección de diseños destacados*/
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
@@ -488,13 +488,13 @@ body.portfolio {
 
 /* Como se organiza la presentación */
 
-body.portfolio .presentacion {
+body.portfolio .presentacion { /*estás repitiendo el selecto en la línea 271 y algunas propiedades son distintas, vas a tener que elegir cuál es la que va*/
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    width: 100%;
+    width: 100%; /*no es necesario*/
 }
 
 body.portfolio .texto-presentacion {
@@ -513,7 +513,7 @@ body.portfolio .contenedor-flecha {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 160px;
+    margin-top: 160px; /*alerta de margin grande, hay mejores formas de hacerlo*/
     margin-bottom: 40px;
 }
 
@@ -539,7 +539,7 @@ body.portfolio .sobre-mi {
     display: flex;
     width: 100%;
     max-width: 1110px;
-    min-height: 85vh;
+    min-height: 85vh; /*es raro establecer que una altura mínima sea tan grande, casi siempre se pone un número pequeño y en px, pero con height directamente es mucho mejor. por otro lado, a nivel diseño se siente un poco vacío, yo utilizaría una altura de 75 porque la cantidad de elementos no se justifica que tenga taanto espacio, revisá las capturas de la devolución*/
     box-sizing: border-box;
     flex-direction: row;
     justify-content: center;
@@ -550,21 +550,21 @@ body.portfolio .sobre-mi {
 }
 
 /* TÍTULO DE LA SEGUNDA SECCIÓN */
-body.portfolio .sobre-mi h1 {
-    display: flex;
+body.portfolio .sobre-mi h1 { /*más allá de que está mal tener varios h1, también tenés el error de tener muchas propiedades repetidas que ya se heredan del h1 gral en la lína 56*/
+    display: flex; /*innecesario*/
     width: 100%;
-    height: auto;
-    justify-content: flex-end;
-    margin: 0;
+    height: auto; /*innecesario*/
+    justify-content: flex-end; /*innecesario*/
+    margin: 0; /*inncesario*/
     text-align: right;
 }
 
 /* TEXTO DE LA SEGUNDA SECCIÓN */
-body.portfolio .sobre-mi p {
-    display: flex;
-    width: 100%;
+body.portfolio .sobre-mi p { /*otra vez cosas que se repiten*/
+    display: flex; /*innecesario*/
+    width: 100%; /*innecesario*/
     max-width: 600px;
-    margin: 0;
+    margin: 0; /*innecesario*/
     line-height: 1.6;
 }
 
@@ -576,7 +576,7 @@ body.portfolio .sobre-mi p {
     align-items: center;
     gap: 20px;
     padding: 0 30px 30px;
-    margin-top: -100px;
+    margin-top: -100px; /*salvo excepciones muy muy particulares no se pueden usar números negativos, este no es el caso*/
 }
 
 /* contenedor de tarjetas */
@@ -590,7 +590,7 @@ body.portfolio .sobre-mi p {
 
 /* tarjeta */
 .tarjeta {
-    flex: none;
+    flex: none; /*innecesario*/
     width: 250px;
     height: 390px;
     perspective: 1000px;
@@ -614,16 +614,16 @@ body.portfolio .sobre-mi p {
 .tarjeta-frente,
 .tarjeta-dorso {
     position: absolute;
-    width: 100%;
+    width: 100%; /*no afecta*/
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /*innecesario*/
+    flex-direction: column; /*innecesario*/
+    align-items: center; /*innecesario*/
     padding: 18px;
-    box-sizing: border-box;
+    box-sizing: border-box; /*repetido*/
     background: #FFFFFF40;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /*innecesario*/
     border: 1px solid #FFFFFF80;
     backface-visibility: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
@@ -675,7 +675,7 @@ body.proyectos {
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; /*repetido*/
     margin-top: 30px;
 }
 /* GALERÍA DE PROYECTOS */
@@ -685,7 +685,7 @@ body.proyectos {
     justify-content: center;
     gap: 30px;
     width: 100%;
-    max-width: 824px;
+    max-width: 824px; /*esto es muy chiquitito, en pantallas grandes queda mucho aire al rededor*/
     box-sizing: border-box;
     margin: 0 auto;
     padding: 40px 20px;
