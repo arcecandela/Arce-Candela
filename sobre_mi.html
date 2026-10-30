@@ -19,7 +19,13 @@
             <a href="index.html#inicio" class="logo">
                 <img src="img/logo_metalizado.png" alt="Logo de Cande Arce" width="60" height="60">
             </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
+            <label for="menu-toggle" class="menu-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <a href="index.html#inicio">Inicio</a>
                 <a href="sobre_mi.html">Sobre mí</a>
@@ -33,7 +39,7 @@
         <section id="yo">
             <img src="img/foto-cande.png" alt="Foto de Arce Candela" width="250px" height="311px">
             <div class="presentacion">
-                <h1>Conocé un poco de mí</h1> <!--el h1 es uno solo por sitio web, un sitio son todos los html presentes, es decir, el index solamente puede tener un h1-->
+                <h2>Conocé un poco de mí</h2>
                 <p>Estudiante universitaria de Diseño y Comunicación Visual, actualmente cursando el tercer año de la
                     carrera. Me caracterizo por ser una persona responsable, organizada y comprometida, con buena
                     capacidad para trabajar en equipo. Busco incorporarme a una organización donde pueda aportar
@@ -46,15 +52,17 @@
                 <div class="formacion">
                     <h3>Formación Académica</h3>
 
-                    <div class="textos-formacion"> <!--esto tiene más carácter de lista-->
-
+                    <div class="textos-formacion">
                         <div class="colegio">
                             <h4>
                                 <a href="https://www.unla.edu.ar/" target="_blank">
                                     Universidad Nacional de Lanús
                                 </a>
                             </h4>
-                            <p>Año de inicio: 2024 | Actualidad</p>
+                            <ul>
+                                <li>Licenciatura en diseño y comunicación visual</li>
+                                <li>Año de inicio: 2024 | Actualidad</li>
+                            </ul>
                         </div>
 
                         <div class="universidad">
@@ -65,8 +73,10 @@
                                     </a>
                                 </h4>
                                 <div class="detalles-colegio">
-                                    <p>Título Secundario en Ciencias Sociales </p>
-                                    <p>Año de egreso: 2022</p>
+                                    <ul>
+                                        <li>Título Secundario en Ciencias Sociales </li>
+                                        <li>Año de egreso: 2022</li>
+                                    </ul>
                                 </div>
 
                             </div>
@@ -86,7 +96,7 @@
                             <li>Atención y asistencia a clientes</li>
                             <li>Cobro y manejo básico de caja</li>
                             <li>Asistencia en el uso de computadoras e impresión</li>
-                            <li>Mantenimiento y organización del espacio de trabajo</li>
+                            <li>Organización del espacio de trabajo</li>
                         </ul>
                     </div>
                 </div>
@@ -121,18 +131,17 @@
         </div>
 
 
-
         <section id="hobbies">
             <h3>Mis Hobbies</h3>
 
             <div class="contenedor-hobbies">
 
-                <div class="lectura"> <!--si lectura, música y cine son elementos que jamás de los jamases se repiten deberían ser ids-->
+                <div id="lectura">
                     <h4>Leer libros</h4>
                     <img src="img/libro.png" alt="Icono de lectura" width="200" height="200">
                 </div>
-                <!-- ¿esto contaria como audio? ¿ y reemplaza el video? --> <!--cuenta, pero dale un poco más de ancho así se puede ver bien el iframe-->
-                <div class="musica">
+
+                <div id="musica">
                     <h4>Escuchar música</h4>
 
                     <iframe
@@ -143,7 +152,7 @@
                     </iframe>
                 </div>
 
-                <div class="cine">
+                <div id="cine">
                     <h4>Mirar series</h4>
                     <img src="img/serie.png" alt="Icono de cine" width="200" height="200">
                 </div>
