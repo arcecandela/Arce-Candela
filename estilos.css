@@ -85,6 +85,7 @@ header .contenedor {
 nav {
     display: flex;
     gap: 30px;
+    align-items: flex-end;
 }
 
 nav a {
@@ -170,13 +171,13 @@ li::before {
     content: "★ ";
     color: #aa2a81;
 }
+
 /* MENÚ HAMBURGUESA */
 .menu-toggle {
     display: none;
 }
 
 .menu-hamburguesa {
-    display: none;
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
@@ -188,34 +189,6 @@ li::before {
     background-color: #aa2a81;
     border-radius: 5px;
 }
-/* MENÚ HAMBURGUESA EN CELULARES */
-@media (max-width: 500px) {
-
-    header .contenedor {
-        position: relative;
-        justify-content: space-between;
-    }
-
-    .menu-hamburguesa {
-        display: flex;
-    }
-
-    header nav {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 10px;
-    }
-
-    .menu-toggle:checked ~ nav {
-        display: flex;
-    }
-}
 
 /* =========================================
 ESTILOS DEL SOBRE MI
@@ -226,7 +199,6 @@ body.sobre-mi {
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
 }
 
 main {
@@ -257,7 +229,6 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    width: 80%;
     max-width: 33rem;
 }
 
@@ -369,18 +340,15 @@ ESTILOS DEL INDEX
 
 /* Fondo exclusivo del index */
 body.portfolio {
-    background: linear-gradient(
-        to bottom,
-        #fc8870,
-        #F3B5E1,
-        #aa2a81
-    );
+    background: linear-gradient(to bottom,
+            #fc8870,
+            #F3B5E1,
+            #aa2a81);
     min-height: 100vh;
 }
 
 body.portfolio #inicio-index .presentacion-inicio {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 70px;
@@ -684,8 +652,8 @@ ESTILOS DEL CONTACTO
    ========================================= */
 body.contacto {
     background: linear-gradient(to right,
-            #F3B5E1,
-            #fc8870);
+            #fc8870,
+            #F3B5E1);
     min-height: 100vh;
 }
 
@@ -698,10 +666,7 @@ body.contacto {
 
 /* CONTENEDOR PRINCIPAL */
 main#contacto {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 50px;
 
     max-width: 1200px;
@@ -711,8 +676,6 @@ main#contacto {
 
 /* SECCIÓN DE BIENVENIDA */
 #bienvenida {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     flex: 1;
     max-width: 500px;
@@ -721,7 +684,6 @@ main#contacto {
 
 /* SECCIÓN DEL FORMULARIO */
 #contacto #formulario {
-    display: flex;
     flex-direction: column;
     flex: 1;
     min-width: 0;
@@ -844,3 +806,105 @@ main#contacto {
     background: #aa2a81;
 }
 
+@media screen and (max-width: 500px) {
+
+    /* HEADER PARA TODAS LAS PÁGINAS */
+    header .contenedor {
+        position: relative;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu-hamburguesa {
+        display: flex;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+    }
+
+    .menu-toggle:checked ~ nav {
+        display: flex;
+    }
+
+    /* INICIO */
+    body.portfolio #inicio-index .presentacion-inicio {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    body.portfolio #inicio-index .texto-presentacion {
+        order: 1;
+        text-align: center;
+    }
+
+    body.portfolio #inicio-index .gif-inicio {
+        order: 2;
+        width: 250px;
+        height: auto;
+    }
+
+    /* PRESENTACIÓN */
+    body.portfolio #sobre-mi-diseñadora {
+        gap: 35px;
+        padding: 50px 20px;
+    }
+
+    body.portfolio .presentacion {
+        width: 100%;
+        gap: 20px;
+    }
+
+    body.portfolio .presentacion h2 {
+        font-size: 27px;
+    }
+
+    /* TARJETAS */
+    body.portfolio #contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    /* CONTACTO */
+body.contacto main#contacto {
+    flex-direction: column;
+    gap: 35px;
+    padding: 100px 20px 40px;
+}
+
+body.contacto #bienvenida {
+    width: 100%;
+    text-align: center;
+}
+
+body.contacto #formulario form {
+    width: 100%;
+    height: auto;
+    padding: 25px 20px;
+}
+
+body.contacto #formulario .mensaje-archivo {
+    flex-direction: column;
+}
+
+    /* FOOTER PARA TODAS LAS PÁGINAS */
+    #pie-de-pagina {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 15px;
+        text-align: center;
+    }
+}
